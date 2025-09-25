@@ -42,3 +42,34 @@ do { // Inicia um loop que continuará até o usuário digitar 0
 }
 while (numeroInput !== 0); // Continua o loop enquanto o número digitado não for 0
 console.log(`A soma dos números digitados é: ${soma}`); // Exibe a soma dos números no console
+
+//mostrar a tabuada de um numero de 1 a 10
+const numeroTabuada = 5; // Número para o qual queremos mostrar a tabuada
+console.log(`Tabuada de ${numeroTabuada}:`); // Exibe o título da tabuada no console
+for (let i = 1; i <= 10; i++) { // Loop de 1 a 10
+    const resultado = numeroTabuada * i; // Calcula o resultado da multiplicação
+    console.log(`${numeroTabuada} x ${i} = ${resultado}`); // Exibe a multiplicação e o resultado no console
+}   
+console.log("Tabuada concluída."); // Indica que a tabuada foi concluída
+
+// leia dois números e mostre o maior
+const numA = parseFloat(prompt("Digite o primeiro número:")); // Solicita ao usuário que digite o primeiro número
+const numB = parseFloat(prompt("Digite o segundo número:")); // Solicita ao usuário que digite o segundo número
+if (numA > numB) { // Compara os dois números
+    console.log(`O maior número é: ${numA}`); // Exibe o primeiro número se for maior
+}
+else if (numB > numA) { // Compara os dois números
+    console.log(`O maior número é: ${numB}`); // Exibe o segundo número se for maior
+}
+else {
+    console.log("Os dois números são iguais."); // Indica que os números são iguais
+}
+//ler 10 numeros e mostre quantos são pares
+let countPares = 0; // Variável para contar quantos números pares foram digitados
+for (let i = 0; i < 10; i++) { // Loop para ler 10 números
+    const numeroLido = parseInt(prompt(`Digite o número ${i + 1}:`)); // Solicita ao usuário que digite um número
+    if (numeroLido % 2 === 0) { // Verifica se o número é par
+        countPares++; // Incrementa o contador se o número for par
+    }
+}
+console.log(`Você digitou ${countPares} números pares.`); // Exibe a quantidade de números pares digitados      
